@@ -6,11 +6,9 @@ import re
 def main_function():
     config_sheet = 'config_sheet'
     src_sheet = 'src_sheet'
-    sheet_url = 'https://docs.google.com/spreadsheets/d/1v6I0vzFhXfGZCOlQYm7C-TVaw8OnmkGKwSRGzESyUqw/edit?usp=sharing'
+    sheet_url = 'sheet_url'
     contacts = sheets.get_contacts(config_sheet,src_sheet,sheet_url)
     # print(contacts)
-    count = sheets.get_contact_row(contacts[0],config_sheet,src_sheet,sheet_url)
-    # count = 335
     for contact in contacts:
         if contact != {}:
             print(contact)
